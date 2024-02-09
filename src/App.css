@@ -150,6 +150,91 @@ body {
   cursor: pointer;
 }
 
+.city-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adatta questo per scegliere la dimensione delle colonne */
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+
+.city-name {
+  color: white;
+  font-weight: bold;
+}
+
+.city-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.city-item:hover {
+  transform: scale(1.05); 
+}
+
+.city-image {
+  width: 100%; 
+  height: auto; 
+  border-radius: 10px; 
+}
+
+.city-name {
+  color: white;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.home-button {
+  background-color: #007bff; 
+  color: white; 
+  border: none; 
+  padding: 10px 20px; 
+  margin-right: 20px; 
+  cursor: pointer; 
+  border-radius: 5px; 
+  position: relative;
+  right: 550px;
+}
+
+.home-button:hover {
+  background-color: #0056b3; 
+}
+
+.home-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px; 
+  padding: 20px;
+}
+
+.city-images-container {
+  flex: 1;
+}
+
+.text-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; 
+}
+
+.text-container p {
+  color: white; 
+  text-align: start;
+}
+
+@media (max-width: 768px) {
+  .home-content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 @media (max-width: 768px) {
   .search-bar input[type="text"] {
     width: 50%;

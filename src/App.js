@@ -23,8 +23,16 @@ function App() {
 
   return (
     <div className="App">
-      <SearchBar onSearch={handleSearch} />
-      <WeatherDisplay data={weatherData} />
+      <header className="app-header">
+        <h1 className="app-title">MeteoApp</h1>
+        <SearchBar onSearch={handleSearch} />
+      </header>
+      <main className="main-content">
+        <WeatherDisplay data={weatherData} />
+      </main>
+      <footer className="app-footer">
+        <p>© 2024 MeteoApp - All rights reserved</p>
+      </footer>
     </div>
   );
 }

@@ -6,7 +6,7 @@ function Footer() {
     <Navbar fixed="bottom" bg="dark" variant="dark">
       <Container>
         <Navbar.Text className="mx-auto">
-          © 2024 MeteoApp - Tutti i diritti riservati
+          © 2024 MeteoApp - SIMONE MANCA
         </Navbar.Text>
       </Container>
     </Navbar>

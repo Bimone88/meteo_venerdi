@@ -8,13 +8,21 @@ function App() {
   const [weatherData, setWeatherData] = useState(null);
   const apiKey = "4de57bc1ea650ffe43dc63934a9ee859";
 
-  const handleSearch = (searchedCity) => {
+  const handleSearch = (searchedCity, selectedDay) => {
     const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${searchedCity}&appid=${apiKey}&units=metric`;
 
     axios
       .get(apiUrl)
       .then((response) => {
-        setWeatherData(response.data);
+        const filteredData = response.data.list.filter((forecast) => {
+          const forecastDate = new Date(forecast.dt * 1000);
+          const forecastDay = forecastDate.toLocaleDateString("en-US", {
+            weekday: "long",
+          });
+          return forecastDay === selectedDay;
+        });
+
+        setWeatherData({ city: response.data.city, list: filteredData });
       })
       .catch((error) => {
         console.error("Errore:", error);
@@ -31,7 +39,7 @@ function App() {
         <WeatherDisplay data={weatherData} />
       </main>
       <footer className="app-footer">
-        <p>© 2024 MeteoApp - All rights reserved</p>
+        <p>© 2024 MeteoApp - SIMONE MANCA</p>
       </footer>
     </div>
   );

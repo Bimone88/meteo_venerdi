@@ -122,6 +122,34 @@ body {
   cursor: pointer;
 }
 
+/* Input text */
+.search-input {
+  border: 1px solid #1461a1;
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+  background-color: #1461a1;
+}
+
+/* Dropdown */
+.search-dropdown {
+  border: 1px solid #1461a1;
+  border-radius: 5px;
+  padding: 8px;
+  color: white;
+  background-color: #1461a1;
+}
+
+/* Submit button */
+.search-button {
+  background-color: #e07439;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
 @media (max-width: 768px) {
   .search-bar input[type="text"] {
     width: 50%;
